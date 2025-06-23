@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VotePower | Digital Voting Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light">
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-container">
+        <div class="logo">VP</div>
+        <div class="logo-text">Vote<span>Power</span></div>
+      </div>
+      <button class="close-sidebar" onclick="toggleSidebar()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="menu-section">
+      <h3 class="menu-title">Profile</h3>
+      <ul class="sidebar-menu">
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Theme toggle inside sidebar -->
+    <div class="theme-toggle">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="menu-toggle" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo-center">VotePower</div>
+    <div class="user-info">
+      <div class="user-img">UA</div>
+      <span>User Adreeraj</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1>Empowering Democracy, One Vote at a Time</h1>
+        <p class="quote">"<em>The vote is the most powerful nonviolent tool we have in a democratic society.</em>" – <strong>John Lewis</strong></p>
+        <button class="btn" id="startVotingBtn"><i class="fas fa-vote-yea"></i> Start Voting</button>
+      </div>
+      <div class="hero-image">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+          <rect x="50" y="50" width="300" height="200" rx="10" fill="#e3f2fd" />
+          <circle cx="100" cy="150" r="30" fill="#2196f3" />
+          <rect x="150" y="120" width="180" height="20" rx="10" fill="#bbdefb" />
+          <rect x="150" y="160" width="120" height="20" rx="10" fill="#bbdefb" />
+          <path d="M70 90 L90 110 L130 70" fill="none" stroke="#4caf50" stroke-width="8" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="cards">
+      <!-- Create Vote -->
+      <div class="card">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="#e3f2fd" />
+          <path d="M50 30 L50 70 M30 50 L70 50" stroke="#2196f3" stroke-width="8" stroke-linecap="round" />
+        </svg>
+        <h2>Create Vote</h2>
+        <p>Initiate a public or private vote, control visibility, and set a deadline for your voting session.</p>
+        <a href="../create_vote/create_vote.html" class="btn"><i class="fas fa-plus-circle"></i> Create Now</a>
+      </div>
+
+      <!-- Explore Vote -->
+      <div class="card">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="#e8f5e9" />
+          <circle cx="50" cy="50" r="30" stroke="#4caf50" stroke-width="8" fill="none" />
+          <path d="M65 50 L50 65 M50 65 L35 50" stroke="#4caf50" stroke-width="8" stroke-linecap="round" />
+          <path d="M50 35 L50 65" stroke="#4caf50" stroke-width="8" stroke-linecap="round" />
+        </svg>
+        <h2>Explore Vote</h2>
+        <p>Enter a vote ID to participate in others' votes or view results of completed voting sessions.</p>
+        <a href="../vote_page/explore_vote.html" class="btn"><i class="fas fa-search"></i> Explore</a>
+      </div>
+    </div>
+
+    <div class="footer" id="mainFooter">
+      <p>© 2025 VotePower | Empowering Democratic Participation | Made by ADREE.</p>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

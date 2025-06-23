@@ -1,0 +1,119 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../assets/images/vote_banner.jpg'); /* Add your image here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  color: #fff;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 34, 68, 0.7); /* blue overlay */
+  z-index: -1;
+}
+
+/* Header */
+.site-header {
+  background-color: rgba(0, 34, 68, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.8rem;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #002244;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  width: 100%;
+  background-color: #002244;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #004488;
+}
+
+.register-msg {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.social-login {
+  margin-top: 20px;
+}
+
+.gmail-btn {
+  background-color: #db4437;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.gmail-btn:hover {
+  background-color: #c23321;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  background-color: rgba(0, 34, 68, 0.9);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

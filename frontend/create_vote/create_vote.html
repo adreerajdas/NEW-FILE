@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Vote</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="create_vote.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1><i class="fas fa-vote-yea"></i> Create New Vote</h1>
+      <p class="subtitle">Create a new voting process with options and deadline</p>
+      
+      <form id="voteForm">
+        <div class="form-group">
+          <label for="title">Vote Title <span class="required">*</span></label>
+          <input type="text" id="title" placeholder="Enter vote title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Enter description..." rows="4"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="deadline">Deadline <span class="required">*</span></label>
+            <input type="datetime-local" id="deadline" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="visibility">Visibility <span class="required">*</span></label>
+            <select id="visibility" required>
+              <option value="public">Public (Visible to all)</option>
+              <option value="private">Private (Restricted access)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Options <span class="required">*</span></label>
+          <div id="optionsContainer">
+            <div class="option-wrapper">
+              <input type="text" class="option-input" placeholder="Option 1" required>
+              <button type="button" class="remove-option" disabled><i class="fas fa-times"></i></button>
+            </div>
+            <div class="option-wrapper">
+              <input type="text" class="option-input" placeholder="Option 2" required>
+              <button type="button" class="remove-option" disabled><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+          <button type="button" id="addOptionBtn" class="secondary-btn">
+            <i class="fas fa-plus"></i> Add Option
+          </button>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn">
+            <i class="fas fa-check-circle"></i> Create Vote
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="shareSection" class="share-section">
+      <h3><i class="fas fa-share-alt"></i> Share This Vote</h3>
+      <div class="share-content">
+        <div class="share-link-container">
+          <input type="text" id="voteLink" readonly>
+          <button id="copyLinkBtn" class="secondary-btn">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <div class="share-platforms">
+          <button class="share-btn whatsapp" data-platform="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </button>
+          <button class="share-btn facebook" data-platform="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="share-btn twitter" data-platform="twitter">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="share-btn email" data-platform="email">
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="create_vote.js"></script>
+</body>
+</html>

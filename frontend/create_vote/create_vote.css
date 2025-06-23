@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary-color: #e5e7eb;
+  --accent-color: #10b981;
+  --error-color: #ef4444;
+  --text-color: #111827;
+  --light-text: #f9fafb;
+  --border-color: #d1d5db;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f3f4f6;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h1 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.required {
+  color: var(--error-color);
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.option-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.option-input {
+  flex: 1;
+}
+
+.remove-option {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-option:not(:disabled):hover {
+  color: var(--error-color);
+}
+
+.remove-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondary-btn:hover {
+  background-color: #f0f7ff;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+/* Share Section */
+.share-section {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.share-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+}
+
+.share-link-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#voteLink {
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 0.375rem 0 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+.share-platforms {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.share-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+}
+
+.whatsapp { background-color: #25D366; }
+.facebook { background-color: #1877F2; }
+.twitter { background-color: #1DA1F2; }
+.email { background-color: #6b7280; }
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .card, .share-section {
+    padding: 1.25rem;
+  }
+}
